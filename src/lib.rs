@@ -493,7 +493,7 @@ impl Node for ComputeNode {
 
             pass.set_pipeline(pipeline);
             pass.set_bind_group(0, &item.bindgroup, &[]);
-            pass.dispatch_workgroups(1, 1, 1);
+            pass.dispatch_workgroups(16, 16, 1);
 
             drop(pass);
 
